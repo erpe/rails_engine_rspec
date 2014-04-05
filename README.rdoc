@@ -1,5 +1,7 @@
 = EngineTest
 
+<b>How to make a mountable rails-engine be testable with rspec and factory_girl</b>
+
 This engine makes use of rspec and factory_girl for testing.
 some adoptions are necessary to make rspec work for engines:
 
