@@ -1,3 +1,21 @@
 = EngineTest
 
-This project rocks and uses MIT-LICENSE.
+This engine makes use of rspec and factory_girl for testing.
+some adoptions are necessary to make rspec work for engines:
+
+== summarized
+
+adopt spec/spec_helper.rb to require factories (see code)
+
++controller-specs+::  add <tt>routes { EngineTest::Engine.routes }</tt>
+
++routing-specs+:: add <tt>routes { EngineTest::Engine.routes }</tt>
+
++view-specs+:: reference full isolated namespace eg <tt>EngineTest::Foo</tt> instead of <tt>Foo</tt> and prefix path-helper with <tt>engine_test.foos_path</tt> - also reference templates by their full path
+
++model-specs+:: reference factory_girl factories by full name <tt>FactoryGirl.build(:engine_test_foo)</tt> instead of :foo 
+
+
+
+
+
