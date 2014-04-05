@@ -8,6 +8,7 @@ some adoptions are necessary to make rspec work for engines:
 == summarized
 
 adopt spec/spec_helper.rb to require factories (see code)
+add <tt>s.add_development_dependency 'factory_girl_rails'</tt> and <tt>s.add_develpment_dependency 'rspec-rails'</tt>to gemspec, otherwise your factories won't be available
 
 +controller-specs+::  add <tt>routes { EngineTest::Engine.routes }</tt>
 
